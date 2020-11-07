@@ -1,0 +1,8 @@
+\subsection{Sampling}
+\subsubsection*{Impulse}
+
+$p(t)=\sum_{n=-\infty}^{+\infty} \delta(t-nT)$\\
+$P(j\om)=\frac{2\pi}{T}\sum_{k=-\infty}^{+\infty} \delta(\om-k\om_s), \om_s=\frac{2\pi}{T}$\\
+$x_p(t)=x(t)p(t), X_p(j\om) = \frac{1}{T}\sum_k X(j(\om-k\om_s))$\\
+$X(j\om)=0(|\om|>\om_M)$, lowpass to restore $x(t)$\\
+No distortion if $\om_s>2\om_M$

@@ -18,20 +18,17 @@
 
 \let\bar\overline
 
-\include{inhalt/def}
+\newcommand\rd{\mathrm{d}}
+\newcommand\om{\omega}
 
+\include{inhalt/def}
 \begin{document}
 %\footnotesize
 \small
 \begin{multicols*}{5}
-\input{inhalt/aussagen}
-\input{inhalt/mengen}
-\input{inhalt/relationen}
-\input{inhalt/abbildungen}
-%\input{inhalt/beweise} 
-\input{inhalt/graphen}
-%\input{inhalt/graphalgo}
-%\input{inhalt/bool}
-%\input{inhalt/formeln}
+\input{inhalt/lti}
+\input{inhalt/fourier}
+\input{inhalt/filtering}
+\input{inhalt/sampling}
 \end{multicols*}
 \end{document}
