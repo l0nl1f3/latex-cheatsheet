@@ -8,9 +8,9 @@ $\tilde{x}(t)=\sum_{k=-\infty}^{+\infty} c_k e^{jk\omega_0 t}=\begin{cases}x(t)\
 \subsubsection*{Real Signals}
 When $c_k*=c_{-k}$\\
 $\begin{aligned}
-x(t)&=\frac{a_0}{2} + \sum_{k=1}^{\infty} (a_k \cos(k\omega_0t)+b_k\sin(k \omega_0 t)) \\
-&=A_0+\sum_{k=1}^{\infty} A_k\cos(k\om_0 t+\phi_k)
-\end{aligned}$
+        x(t) & =\frac{a_0}{2} + \sum_{k=1}^{\infty} (a_k \cos(k\omega_0t)+b_k\sin(k \omega_0 t)) \\
+             & =A_0+\sum_{k=1}^{\infty} A_k\cos(k\om_0 t+\phi_k)
+    \end{aligned}$
 
 $|c_k|^2=|c_{-k}|^2=\frac{a_k^2+b_k^2}{4}$
 
@@ -35,7 +35,7 @@ $\mathcal{F}\{x(t)y(t)\}=\sum c_kd_{k-l}=c_k*d_k$\\
 $\mathcal{F}\{x'(t)\}=jk\om_0c_k$\\
 $y(t)=\int_0^{t}x(\tau)\rd \tau, (0<t<T), y(t)=y(t+T)$\\$y(t)=\sum_{k\ne 0} \frac{c_k}{jk\om_0}(e^{jk\om_0 t} - 1) + c_0t$
 
-\subsection{DT FS}
+    \subsection{DT FS}
 
 $x[n] = x[n + N]$
 
@@ -43,12 +43,12 @@ $x[n]=\sum_{k=0}^{N-1} c_ke^{\frac{j2\pi k n}{N}}, 0\le n<N$
 
 $c_k=\frac 1 N\sum_{l=0}^{N-1} x[l] e^{-\frac{j2\pi k l}{N}}=c_{k+N}$
 
-\subsection{CT FT}
+    \subsection{CT FT}
 
 $X(j\om) = \int_{-\infty}^{\infty} x(t) e^{-j\om t} \rd t$
 
 $x(t)=\frac{1}{2\pi} \int_{-\infty}^{\infty} X(j\om) e^{j\om t}\rd \om$
-\subsubsection*{Examples}
+    \subsubsection*{Examples}
 
 $\mathcal{F}\{x(t) = a[u(t+\frac\tau2)-u(t-\frac\tau2)]\} =  a\tau Sa(\frac{\om\tau}{2})$
 
@@ -59,7 +59,7 @@ $\mathcal{F}\{\delta(t)\}=1, \mathcal{F}\{1\}=2\pi\delta(\om)$
 $\mathcal{F}\{e^{j\om_0t}\} = 2\pi\delta(\om-\om_0)$
 
 $\mathcal{F}\{\text{sgn}(t)\} = \frac{2}{j\omega}$
-\subsubsection*{Periodic Signals}
+    \subsubsection*{Periodic Signals}
 
 $x(t)=\sum_{k=-\infty}^{+\infty} c_k e^{jk\omega_0 t}$
 
@@ -67,28 +67,28 @@ $\mathcal{F}\{x(t)\}=\int_{-\infty}^{+\infty} \sum_{k=-\infty}^{+\infty} c_ke^{j
 
 $ = \sum_{k=-\infty}^{+\infty} 2\pi c_k \delta(\om - k \om_0)$
 
-\subsubsection*{Parseval Theorem}
+    \subsubsection*{Parseval Theorem}
 
 $\int_{-\infty}^{+\infty} |x(t)|^2\rd t = \frac{1}{2\pi} \int_{-\infty}^{+\infty} |X(j\om)|^2\rd \om$
 
-\subsubsection*{Properties}
+    \subsubsection*{Properties}
 
 $\mathcal{F}\{x(t)\} = X(j\om), \mathcal{F}\{X(jt)\} = 2\pi x(j^2\om)$\\
 $\mathcal{F}\{x(t-\tau)\} = X(j\om) e^{-j\om\tau}$\\
-$\mathcal{F}\{x(at)\} = \frac{1}{\alpha}X(\frac{j\om}{\alpha})$\\
+$\mathcal{F}\{x(\alpha t)\} = \frac{1}{|\alpha|}X(\frac{j\om}{\alpha})$\\
 $\mathcal{F}\{x^*(t)\} = X^*(-j\om)$\\
 $\mathcal{F}\{x'(t)\} = j\om X(j\om), \mathcal{F}\{tx(t)\} = j\frac{\rd X(j\om)}{\rd \om}$\\
 $\mathcal{F}\{\int_{-\infty}^{t} x(\tau) \rd \tau\} = \frac{X(j\om)}{j\om} +\pi X(0)\delta(\om)$\\
 $\mathcal{F}\{-\frac{x(t)}{jt} +\pi x(0)\delta(t)\} = \int_{-\infty}^{\om} X(j\eta) \rd \eta$\\
 $\mathcal{F}\{x_1(t)*x_2(t)\} = X_1(j\om) X_2(j\om),$\\
 $\mathcal{F}\{x_1(t)x_2(t)\} = \frac{1}{2\pi}X_1(j\om) * X_2(j\om)$
-\subsection{DT FT}
+    \subsection{DT FT}
 
 $X(e^{j\om}) = \sum_n x[n] e^{-j\om n} = X(e^{j(\om + 2\pi)})$ (*)
 
 $x[n] = \frac{1}{2\pi} \int_{2\pi} X(e^{j\om}) e^{j\om n} \rd \om$
 
-\subsubsection*{Examples}
+    \subsubsection*{Examples}
 
 $x[n] = \begin{cases} 1, n\ge 0\\-1, n<0\end{cases}$
 
@@ -98,13 +98,13 @@ $\mathcal{F}\{u[n]\}=\frac{1}{1-e^{-j\om}} + \pi\sum_{k=-\infty}^{+\infty} \delt
 
 $\mathcal{F}\{e^{j\om_0n}\} = \sum_{n=-\infty}^{+\infty} e^{-j(\om-\om_0)n} = 2\pi\sum \delta(\om-\om_0-2k\pi)$
 
-\subsubsection*{Periodic Signals}
+    \subsubsection*{Periodic Signals}
 
 $x[n] = x[n+N]$, Fourier Series $x[n] = \sum_{k=0}^{N-1} c_k e^{\frac{j2\pi k n}{N}}$\\
 $c_k = \frac{1}{N} \sum x[l] e^{\frac{-j2\pi k l}{N}} = c_{k + N}$\\
 $\mathcal{F}\{x(t)\} = \sum_{k = 0}^{N - 1} c_k\mathcal{F}\{e^{\frac{j2\pi kn}{N}}\}=\sum_{k=-\infty}^{+\infty} 2\pi c_k\delta(\om-\frac{2k\pi}{N})$
 
-\subsubsection*{CT FS and DT FT}
+    \subsubsection*{CT FS and DT FT}
 
 $X(e^{j\om}) = \sum_n x[n] e^{-j\om n} = X(e^{j(\om + 2\pi)})$\\
 $x[n] = \frac{1}{2\pi} \int_{2\pi} X(e^{j\om}) e^{j\om n} \rd \om$\\
@@ -113,7 +113,7 @@ $x(t)=\sum_{k=-\infty}^{+\infty} c_k e^{jk\omega_0 t}$
 
 $x[n]=c_{-n}\rightarrow x(t)=X(e^{j\om_0 t})$
 
-\subsubsection*{Properties}
+    \subsubsection*{Properties}
 
 $x_k[n] = \begin{cases}x[n/k], n/k\in Z\\0, otherwise \end{cases}$\\
 $\mathcal{F}\{x_k[n]\} = X(e^{jk\om})$\\
@@ -122,6 +122,6 @@ $\mathcal{F}\{nx[n]\} = j\frac{\rd X(e^{j\om})}{\rd \om}$\\
 $\mathcal{F}\{\sum_{k\le n} x[k]\} = \frac{X(e^{j\om})}{(1-e^{-j\om})} + \pi X(e^{j0}) \sum \delta(\om - 2k\pi)$\\
 $\mathcal{F}\{x[n]y[n]\}=\frac{1}{2\pi} \int_{2\pi} X(e^{j\theta})Y(e^{j(\om-\theta)})\rd \theta$
 
-\subsection{DFT}
+    \subsection{DFT}
 
 $X[k]=X(e^{\frac{j2\pi k}{N}})$ (sampling DT FT)
