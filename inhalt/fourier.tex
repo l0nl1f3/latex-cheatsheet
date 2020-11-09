@@ -1,5 +1,5 @@
 \section{Fourier Analysis}
-\subsection*{CT Periodic Signals}
+\subsection*{CT FS}
 $x(t)=x(t+T), \omega_0=\frac{2\pi}{T}$
 
 $c_k=\frac 1 T \int_T x(t) e^{-jk\omega_0 t} \rd t$
@@ -35,7 +35,7 @@ $\mathcal{F}\{x(t)y(t)\}=\sum c_kd_{k-l}=c_k*d_k$\\
 $\mathcal{F}\{x'(t)\}=jk\om_0c_k$\\
 $y(t)=\int_0^{t}x(\tau)\rd \tau, (0<t<T), y(t)=y(t+T)$\\$y(t)=\sum_{k\ne 0} \frac{c_k}{jk\om_0}(e^{jk\om_0 t} - 1) + c_0t$
 
-\subsection{DT Periodic Signals}
+\subsection{DT FS}
 
 $x[n] = x[n + N]$
 
@@ -84,7 +84,7 @@ $\mathcal{F}\{x_1(t)*x_2(t)\} = X_1(j\om) X_2(j\om),$\\
 $\mathcal{F}\{x_1(t)x_2(t)\} = \frac{1}{2\pi}X_1(j\om) * X_2(j\om)$
 \subsection{DT FT}
 
-$X(e^{j\om}) = \sum_n x[n] e^{-j\om n} = X(e^{j(\om + 2\pi)})$
+$X(e^{j\om}) = \sum_n x[n] e^{-j\om n} = X(e^{j(\om + 2\pi)})$ (*)
 
 $x[n] = \frac{1}{2\pi} \int_{2\pi} X(e^{j\om}) e^{j\om n} \rd \om$
 
@@ -92,11 +92,11 @@ $x[n] = \frac{1}{2\pi} \int_{2\pi} X(e^{j\om}) e^{j\om n} \rd \om$
 
 $x[n] = \begin{cases} 1, n\ge 0\\-1, n<0\end{cases}$
 
-$\mathcal{F}\{x(t)\}=\frac{2}{1-e^{-j\om}}$
+$\mathcal{F}\{x[n]\}=\frac{2}{1-e^{-j\om}}$
 
-$\mathcal{F}\{u(t)\}=\frac{1}{1-e^{-j\om}} + \pi\sum_{k=-\infty}^{+\infty} \delta(\om - 2k\pi)$
+$\mathcal{F}\{u[n]\}=\frac{1}{1-e^{-j\om}} + \pi\sum_{k=-\infty}^{+\infty} \delta(\om - 2k\pi)$
 
-$\mathcal{F}\{e^{j\om_0t}\} = \sum_{n=-\infty}^{+\infty} e^{-j(\om-\om_0)n} = 2\pi\sum \delta(\om-\om_0-2k\pi)$
+$\mathcal{F}\{e^{j\om_0n}\} = \sum_{n=-\infty}^{+\infty} e^{-j(\om-\om_0)n} = 2\pi\sum \delta(\om-\om_0-2k\pi)$
 
 \subsubsection*{Periodic Signals}
 
