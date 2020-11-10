@@ -28,12 +28,12 @@ $Sa(t)=\begin{cases}\frac{\sin(t)}{t}, t\ne 0\\1, t=0\end{cases}$
 $\frac  1 T \int_T |x(t)|^2\rd t = \sum_k |c_k|^2=A_0^2+\frac 1 2\sum_{k\ge 1} A_k^2$
 
 \subsubsection*{Properties}
-$\mathcal{F}\{x(t)\}=c_k,\mathcal{F}\{x(t-t_0)\}=c_ke^{-jk\om_0 t_0}$\\
-$\mathcal{F}\{x(t)\}=c_k,\mathcal{F}\{x^*(t)\}=c_{-k}*$\\
+$\mathcal{FS}\{x(t)\}=c_k,\mathcal{FS}\{x(t-t_0)\}=c_ke^{-jk\om_0 t_0}$\\
+$\mathcal{FS}\{x(t)\}=c_k,\mathcal{FS}\{x^*(t)\}=c_{-k}*$\\
 $x(t)= \sum \frac{c_k+c_{-k}*}{2}e^{jk\om_0t} + j \sum \frac{c_k-c_{-k}*}{2j}e^{jk\om_0t}$ \\
-$\mathcal{F}\{x(t)y(t)\}=\sum c_ld_{k-l}=c_k*d_k$\\
-$\mathcal{F}\{x'(t)\}=jk\om_0c_k$\\
-$y(t)=\int_0^{t}x(\tau)\rd \tau, (0<t<T), y(t)=y(t+T)$\\$y(t)=\sum_{k\ne 0} \frac{c_k}{jk\om_0}(e^{jk\om_0 t} - 1) + c_0t$
+$\mathcal{FS}\{x(t)y(t)\}=\sum c_ld_{k-l}=c_k*d_k$\\
+$\mathcal{FS}\{x'(t)\}=jk\om_0c_k$\\
+$\mathcal{FS}\{y(t)\}=\int_0^{t}x(\tau)\rd \tau, (0<t<T), y(t)=y(t+T)$\\$y(t)=\sum_{k\ne 0} \frac{c_k}{jk\om_0}(e^{jk\om_0 t} - 1) + c_0t$
 
 \subsection{DT FS}
 
@@ -42,6 +42,15 @@ $x[n] = x[n + N]$
 $x[n]=\sum_{k=0}^{N-1} c_ke^{\frac{j2\pi k n}{N}}, 0\le n<N$
 
 $c_k=\frac 1 N\sum_{l=0}^{N-1} x[l] e^{-\frac{j2\pi k l}{N}}=c_{k+N}$
+
+\subsubsection*{Examples}
+
+$x[n]=\begin{cases}1,|n|<=N_1\\0, N_1<|n|<=\frac N 2 \end{cases}, \\\mathcal{FS}\{x[n]\}=\begin{cases}\frac{\sin[(2\pi k / N)(N_1 + \frac 1 2)]}{N\sin(2\pi k / 2N)}, k\ne tN\\\frac{2N_1+1}{N}, k=tN\end{cases}$
+
+$\mathcal{FS}\{e^{j\om_0 n}\} = \begin{cases}
+    1,k=m+tN\\0, otherwise
+\end{cases}, \om_0 = \frac{2\pi m}{N}$
+
 
 \subsection{CT FT}
 
@@ -65,7 +74,7 @@ $x(t)=\sum_{k=-\infty}^{+\infty} c_k e^{jk\omega_0 t}$
 
 $\mathcal{F}\{x(t)\}=\int_{-\infty}^{+\infty} \sum_{k=-\infty}^{+\infty} c_ke^{jk\om_0t} e^{-j\om t}\rd t$
 
-$ = \sum_{k=-\infty}^{+\infty} 2\pi c_k \delta(\om - k \om_0)$
+$ = 2\pi \sum_{k=-\infty}^{+\infty} c_k \delta(\om - k \om_0)$
 
 \subsubsection*{Parseval Theorem}
 
@@ -90,6 +99,9 @@ $x[n] = \frac{1}{2\pi} \int_{2\pi} X(e^{j\om}) e^{j\om n} \rd \om$
 
 \subsubsection*{Examples}
 
+$\mathcal{F}\{[|n|\le N_1]\} = \frac{\sin{\om(N_1+\frac 1 2)}}{\sin(\frac{\om}{2})}$\\
+
+$\mathcal{F}\{\frac{\sin(Wn)}{\pi n}\}=[u(\om+W)-u(\om-W)]$(Periodic, $T=2\pi$)
 $x[n] = \begin{cases} 1, n\ge 0\\-1, n<0\end{cases}$
 
 $\mathcal{F}\{x[n]\}=\frac{2}{1-e^{-j\om}}$
