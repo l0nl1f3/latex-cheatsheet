@@ -12,4 +12,12 @@ $P(j\om)=Te^{-\frac{j\om T}{2}} Sa(\frac{\om T}{2})$\\
 $X_0(j\om)=\sum_{k=-\infty}^{+\infty} e^{-\frac{j\om T}{2}} Sa(\frac{\om T}{2}) X(j(\om-k\om_s))$\\
 $H_{r}(j\om) =\frac{e^{\frac{j\om T}2}}{Sa(\frac{\om T}{2})}, |\om|<|\om_c|$\\
 \subsubsection*{Linear Interpolation}
-$x_r(t)=x_p(t)*h(t)=\sum_{n=-\infty}^{+\infty} x_p(nT) h(t-nT)\\=\sum_{n=-\infty}^{+\infty} x(nT) $
+$x_1(t)=\sum_{n=-\infty}^{+\infty} x(kT)p_1(t-kT), p_1(t)=(1-\frac{|t|}{T})[u(t+T)-u(t-T)]$\\
+$P_1(j\om)=TSa^2(\frac{\om T}{2})$\\
+$X_1(j\om)=\sum_{k=-\infty}^{+\infty}Sa^2(\frac{\om T}{2})X(j(\om-k\om_s))$\\
+$H_r(j\om)=Sa^{-2}(\frac{\om T}{2}), |\om|<|\om_c|$
+\subsubsection*{Processing}
+$y(t)=x(t)*h(t), y_d[n]=x_d[n]*h_d[n], x_d[n]=x(nT), y_d[n]=y(nT)$\\
+$Y_d(e^{j\Omega})=X_d(e^{j\Omega})H_d(e^{j\Omega})$ (also band limited)\\
+$X_d(e^{j\Omega})=X_p(\frac{j\Omega}{T})=\frac 1 T\sum_{k=-\infty}^{+\infty} X(j\frac{j(\Omega-2k\pi)}{T})$\\
+$H_d(e^{j\Omega})=H(\frac{j\Omega}{T}), -\pi\le \Omega<\pi$
