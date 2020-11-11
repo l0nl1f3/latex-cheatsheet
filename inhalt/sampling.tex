@@ -6,6 +6,10 @@ $x_p(t)=x(t)p(t), X_p(j\om) = \frac{1}{T}\sum_k X(j(\om-k\om_s))$ (copy and past
 If $X(j\om)=0(|\om|>\om_M)$, No overlap in freq domain if $\om_s>2\om_M$\\
 lowpass filter $\om_c\in(\om_M,\om_s - \om_M)$ to restore signal
 \subsubsection*{Zero-Order Holding}
-$x_0(t)=\sum_{k=-\infty}^{+\infty} x(kT)p_0(t-kT)=x(t)p(t)*p_0(t), p_0(t)=u(t)-u(t-T)$\\
+$x_0(t)=\sum_{k=-\infty}^{+\infty} x(kT)p_0(t-kT)=x(t)p(t)*p_0(t)$\\
+$ p_0(t)=u(t)-u(t-T)$\\
 $P(j\om)=Te^{-\frac{j\om T}{2}} Sa(\frac{\om T}{2})$\\
-$X_0(j\om)=\sum_{k=-\infty}^{+\infty} e^{-\frac{j\om T}{2}} Sa(\frac{\om T}{2}) X(j(\om-k\om_s))$
+$X_0(j\om)=\sum_{k=-\infty}^{+\infty} e^{-\frac{j\om T}{2}} Sa(\frac{\om T}{2}) X(j(\om-k\om_s))$\\
+$H_{r}(j\om) =\frac{e^{\frac{j\om T}2}}{Sa(\frac{\om T}{2})}, |\om|<|\om_c|$\\
+\subsubsection*{Linear Interpolation}
+$x_r(t)=x_p(t)*h(t)=\sum_{n=-\infty}^{+\infty} x_p(nT) h(t-nT)\\=\sum_{n=-\infty}^{+\infty} x(nT) $
