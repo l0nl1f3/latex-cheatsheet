@@ -1,0 +1,26 @@
+\section{LTI}
+\subsection*{CT DE}
+$\sum_{k=0}^{N}a_k\frac{\rd^k y(t)}{\rd t^k}=\sum_{k=0}^{M} b_k\frac{\rd^k x(t)}{\rd t^k}$\\
+$\sum_{k=0}^{N} a_k x^k = a_N \prod_{i=1}^p (x-x_i)^{n_i}$\\
+$y_h(t) = \sum_{i=1}^{p} (\sum_{j=0}^{n_i-1} A_{i,j} t^j) e^{x_it}$\\
+If $x(t)=\sum_{k=0}^{m} C_kt^ke^{x_i t}$\\
+$y_p(t)=(\sum_{k=0}^{m} B_kt^k)t^{n_i} e^{x_it}, n_i\ge 0$
+
+Determine constants. $y(t_0), \frac{\rd y(t_0)}{\rd y}, \ldots \frac{\rd^{N-1} y(t_0)}{\rd y^{N-1}}$
+\subsection*{DT DE}
+$\sum_{k=0}^{N} a_k y[n-k] = \sum_{k=0}^{M} b_k x[n-k]$\\ 
+$\sum_{k=0}^N a_{N-k} x^k = a_0\prod_{i=1}^p (x-x_i)^{n_i}$\\
+$y_h[n] = \sum_{i=1}^{p} (\sum_{j=0}^{n_i-1} A_{i,j} n^j) x_i^{n}$\\
+if $x[n] = \sum_{i=0}^m C_i n^i s^n$\\
+$y_p[n]=(\sum_{k=0}^{m} B_kn^k)n^{n_i}x_i^n , n_i\ge 0$\\
+Special: $x_i=1$
+\subsection*{Unit Impulse Resp}
+
+$h_p(t) = 0$
+
+Matching $\delta^{(k)}(t), \delta^{(k-1)}(t), \delta^{(k-2)}(t)
+\ldots$ (Only singularity part)
+
+$\int_{0-}^{0+}$ to determine coefficient
+
+$y(t)=\int_{\tau} x(\tau)  h(t-\tau)$
